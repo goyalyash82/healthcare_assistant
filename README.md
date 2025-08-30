@@ -86,3 +86,6 @@ Output: "Maintain healthy diet, exercise regularly, monitor sugar levels."
 
 This project is for educational purposes only.
 Not a substitute for professional medical advice. Always consult a doctor.
+
+
+👨‍💻 Developed by Yash Goyal
