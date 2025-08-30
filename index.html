@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthCare Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>HealthCare Assistant</h1>
+        <form method="post">
+            <input type="text" name="symptom" placeholder="Enter your symptom (e.g., fever)" required>
+            <button type="submit">Get Advice</button>
+        </form>
+
+        {% if tip %}
+            <div class="result">
+                <h2>Advice:</h2>
+                <p>{{ tip }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
