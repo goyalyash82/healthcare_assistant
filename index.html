@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Healthcare Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Healthcare Assistant</h1>
+    <form id="searchForm">
+      <input id="disease" name="disease" type="text" autocomplete="off" placeholder="Enter disease or symptom (e.g., fever)" required />
+      <button type="submit">Search</button>
+    </form>
+    <div id="result" class="result" role="alert" aria-live="polite"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("searchForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new URLSearchParams(new FormData(form)); // ensures compatibility with Flask request.form
+      const resultDiv = document.getElementById("result");
+      resultDiv.textContent = "Loading...";
+      try {
+        const res = await fetch("/search", { method: "POST", body: data });
+        const json = await res.json();
+        if (!res.ok) {
+          resultDiv.textContent = json.error || "An error occurred.";
+          resultDiv.classList.add('error');
+          resultDiv.classList.remove('success');
+        } else {
+          resultDiv.textContent = json.info || "No information found.";
+          resultDiv.classList.remove('error');
+          resultDiv.classList.add('success');
+        }
+      } catch (err) {
+        resultDiv.textContent = "Network error: " + err.message;
+        resultDiv.classList.add('error');
+        resultDiv.classList.remove('success');
+      }
+    });
+  </script>
+</body>
+</html>
