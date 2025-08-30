@@ -20,12 +20,16 @@ The knowledge base contains **300+ common diseases** with their suggested relief
 
 Healthcare-Assistant/
 │── app.py # Flask backend
+
 │── diseases.json # Database of 300+ diseases
+
 │── templates/
 │ └── index.html # Frontend interface
+
 │── static/
 │ ├── style.css # Styles
 │ └── script.js # (Optional) extra logic
+
 │── README.md # Project description
 
 
