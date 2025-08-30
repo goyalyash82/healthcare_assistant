@@ -1,5 +1,4 @@
-health_tips = {
-    # Common conditions
+{
     
   "fever": "Drink plenty of fluids, rest, take paracetamol if necessary, and consult a doctor if fever is high or persists.",
   "cough": "Stay hydrated, take honey with warm water, avoid cold drinks, and see a doctor if it lasts over 2 weeks.",
@@ -97,7 +96,7 @@ health_tips = {
   "multiple sclerosis": "Physiotherapy, prescribed drugs, and lifestyle changes.",
   "cervical spondylosis": "Exercise neck gently, maintain posture, and take pain relief if needed.",
   "sciatica": "Physiotherapy, hot/cold compress, and prescribed medication.",
-  "carpal tunnel syndrome": "Rest wrist, use splints, and consider physiotherapy."
+  "carpal tunnel syndrome": "Rest wrist, use splints, and consider physiotherapy.",
   "meningitis": "Seek immediate medical attention, rest, and follow prescribed antibiotics or antivirals.",
   "encephalitis": "Seek emergency care, rest, and follow prescribed antiviral medications.",
   "rabies": "Emergency — wash wound with soap and water, get immediate vaccination.",
@@ -208,7 +207,7 @@ health_tips = {
   "gonorrhea": "Consult doctor, take antibiotics.",
   "chlamydia": "Consult doctor, antibiotics required.",
   "genital herpes": "Take antivirals, practice safe lifestyle.",
-  "HPV infection": "Vaccination preventive, consult doctor if warts appear."
+  "HPV infection": "Vaccination preventive, consult doctor if warts appear.",
   "trichomoniasis": "Consult doctor, take prescribed antibiotics.",
   "bacterial vaginosis": "Take prescribed antibiotics, maintain hygiene.",
   "yeast infection": "Use antifungal creams or oral medicine as prescribed.",
